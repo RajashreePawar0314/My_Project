@@ -51,3 +51,4 @@ Route::get('/get-subcategories/{id}',function($id){
 return Category::where('parent_id',$id)->get();
 
 });
+Route::delete('/product-image/{id}', [ProductController::class, 'deleteImage'])->name('product.image.delete');

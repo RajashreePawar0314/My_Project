@@ -26,8 +26,6 @@ public function adminLogout(Request $request)
     return redirect('/admin_login');
 }
 
-
-
     public function register(Request $request)
 {
     $request->validate([

@@ -65,15 +65,17 @@ background:#D3D3D3;
 
 <h2>Add Product</h2>
 
-<form action="{{ route('products.store') }}" method="POST">
+<form method="POST" enctype="multipart/form-data" action="{{ route('products.store') }}">
 
 @csrf
 
 <label>Product Name</label>
 <input type="text" name="name">
 
-<label>Category</label>
+<label>Add Image File</label>
+<input type="file" name="images[]" multiple>
 
+<label>Category</label>
 <select name="category_id" id="category">
 
 <option value="">Select Category</option>

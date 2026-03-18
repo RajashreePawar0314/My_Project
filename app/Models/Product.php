@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models;
-
+use App\Models\ProductImage;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Category;
 
@@ -25,5 +25,7 @@ public function subcategory()
 {
 return $this->belongsTo(Category::class,'subcategory_id');
 }
-
+public function images(){
+    return $this->hasMany(ProductImage::class);
+}
 }
