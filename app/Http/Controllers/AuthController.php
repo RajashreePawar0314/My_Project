@@ -42,22 +42,8 @@ public function adminLogout(Request $request)
 
     return redirect()->route('login')->with('success','Registration Successful');
 }
-/*public function login(Request $request)
-{
-    $user = User::where('email', $request->email)->first();
 
-    if($user && Hash::check($request->password, $user->password))
-    {
-        Session::put('user_id', $user->id);
-        Session::put('user_name', $user->name);
 
-        return redirect('/dashboard');
-    }
-    else
-    {
-        return back()->with('error','Invalid Email or Password');
-    }
-}*/
 public function login(Request $request)
 {
     $email = $request->email;
@@ -71,6 +57,7 @@ public function login(Request $request)
     {
         Session::put('user_id',$user->id);
         Session::put('user_name',$user->name);
+        Session::put('user_email',$user->email);
         return redirect('/cart');
     }
 

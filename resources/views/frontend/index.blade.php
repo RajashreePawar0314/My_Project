@@ -13,13 +13,6 @@ body {
     margin: 0;
 }
 
-.header {
-    background: #2ecc71;
-    color: white;
-    padding: 15px;
-    text-align: center;
-}
-
 .main-container {
     display: flex;
 }
@@ -98,7 +91,29 @@ button:hover {
     background: darkgreen;
 }
 
+.header {
+    background: #2ecc71;
+    color: white;
+    padding: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
     </style>
+
 </head>
 
 <body>
@@ -106,9 +121,30 @@ button:hover {
 <!-- Header -->
 
 <div class="header">
-    <h2>MakeDream</h2>
+
+    <div class="logo">
+        <h2>MakeDream</h2>
+    </div>
+
+    <div class="menu">
+
+        <a href="/">
+            Home
+        </a>
+
+        <a href="/cart">
+            Cart
+        </a>
+
+        <a href="/profile">
+            Profile
+        </a>
+
+    </div>
+
 </div>
 
+<!-- Sidebar Menu -->
 
 
 <div class="search-bar">

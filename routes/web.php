@@ -33,6 +33,13 @@ Route::middleware('auth')->group(function () {
     Route::get('/cart', [CartController::class, 'cart']);
 
 });
+
+Route::get('/profile', function () {
+    return view('frontend.profile');
+});
+
+Route::post('/remove-from-cart/{id}', [CartController::class, 'removeFromCart']);
+
 // Login & Register pages
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
 Route::get('/register', [AuthController::class, 'showRegister'])->name('register');
