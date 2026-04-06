@@ -71,7 +71,7 @@ public function login(Request $request)
     {
         Session::put('user_id',$user->id);
         Session::put('user_name',$user->name);
-        return redirect('/dashboard');
+        return redirect('/cart');
     }
 
     return back()->with('error','Invalid Email or Password');
